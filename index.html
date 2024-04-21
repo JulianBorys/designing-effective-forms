@@ -17,46 +17,57 @@
     <div class="container">
         <h1>Uzupełnij formularz</h1>
         <form id="form">
-            <div class="mb-3">
-                <label for="firstName" class="form-label">Imię</label>
-                <input type="text" class="form-control" id="firstName" placeholder="Wpisz imię" required>
+            <div class="col mb-3">
+                <label for="firstName" class="form-label">Imię
+                    <input type="text" class="form-control" id="firstName" placeholder="Imię" required>
+                </label>
+                <label for="lastName" class="form-label">Nazwisko
+                    <input type="text" class="form-control" id="lastName" placeholder="Nazwisko" required>
+                </label>
             </div>
-            <div class="mb-3">
-                <label for="lastName" class="form-label">Nazwisko</label>
-                <input type="text" class="form-control" id="lastName" placeholder="Wpisz nazwisko" required>
-            </div>
+
             <div class="mb-3">
                 <label for="street" class="form-label">Ulica</label>
                 <input type="text" class="form-control" id="street" placeholder="Wpisz ulicę" required>
             </div>
-            <div class="mb-3">
-                <label for="country" class="form-label">Kraj</label>
-                <select class="form-select" id="country" required>
-                    <option value="">Wybierz kraj</option>
-                    <!-- Options will be filled by JavaScript -->
-                </select>
+
+            <div class="col mb-3">
+                <label for="zipCode" class="form-label">Kod pocztowy
+                    <input type="text" class="form-control" id="zipCode" placeholder="Wpisz kod pocztowy" required>
+                </label>
+                <label for="city" class="form-label">Miasto
+                    <input type="text" class="form-control" id="city" placeholder="Wpisz miasto" required>
+                </label>
             </div>
-            <div class="row mb-3">
-                <label for="phoneNumber" class="form-label">Numer telefonu komórkowego</label>
-                <div class="input-group">
-                    <select class="form-select" id="countryCode" aria-label="Wybierz numer kierunkowy">
-                        <option selected>Wybierz...</option>
-                        <option value="+48">+48 (Polska)</option>
-                        <option value="+1">+1 (Stany Zjednoczone)</option>
-                        <!-- Dodaj więcej opcji, jeśli jest to potrzebne -->
+
+            <div class="col mb-3">
+                <label for="country" class="form-label">Kraj
+                    <select class="form-select" id="country" required>
+                        <option value="">Wybierz kraj</option>
+                        <!-- Options will be filled by JavaScript -->
                     </select>
-                    <input type="text" class="form-control" id="phoneNumber" placeholder="Wpisz numer komórkowy"
-                        required>
-                </div>
+                </label>
+                <label for="phoneNumber" class="form-label">Numer telefonu komórkowego
+                    <div class="input-group">
+                        <select class="form-select" id="countryCode" aria-label="Wybierz numer kierunkowy">
+                            <option selected>Wybierz...</option>
+                            <option value="+48">+48 (Polska)</option>
+                            <option value="+1">+1 (Stany Zjednoczone)</option>
+                            <!-- Dodaj więcej opcji, jeśli jest to potrzebne -->
+                        </select>
+                        <input type="text" class="form-control" id="phoneNumber" placeholder="Wpisz numer komórkowy"
+                               required>
+                    </div>
+                </label>
             </div>
-            <div class="mb-3">
-                <label for="city" class="form-label">Miasto</label>
-                <input type="text" class="form-control" id="city" placeholder="Wpisz miasto" required>
+
+            <div class="row mb-3">
+
+
             </div>
-            <div class="mb-3">
-                <label for="zipCode" class="form-label">Kod pocztowy</label>
-                <input type="text" class="form-control" id="zipCode" placeholder="Wpisz kod pocztowy" required>
-            </div>
+
+
+
             <div class="mb-3">
                 <label for="shippingMethod" class="form-label">Rodzaj przesyłki</label>
                 <select class="form-select" id="shippingMethod" required>
@@ -65,6 +76,7 @@
                     <option value="InPost">InPost</option>
                 </select>
             </div>
+
             <div class="mb-3">
                 <label for="paymentMethod" class="form-label">Rodzaj płatności</label>
                 <select class="form-select" id="paymentMethod" required>
