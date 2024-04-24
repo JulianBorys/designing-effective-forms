@@ -15,96 +15,98 @@
 
 <body>
     <div class="container">
-        <h1>Uzupełnij formularz</h1>
+        <br><h1>Uzupełnij formularz</h1>
         <form id="form">
-            <div class="col mb-3">
-                <label for="firstName" class="form-label">Imię
-                    <input type="text" class="form-control" id="firstName" placeholder="Imię" required>
-                </label>
-                <label for="lastName" class="form-label">Nazwisko
-                    <input type="text" class="form-control" id="lastName" placeholder="Nazwisko" required>
-                </label>
+            <div class="input-group mb-3 mt-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Imię i nazwisko</span>
+                </div>
+                <input type="text" class="form-control">
+                <input type="text" class="form-control">
             </div>
 
-            <div class="mb-3">
+            <div class="mb-2">
                 <label for="street" class="form-label">Ulica</label>
                 <input type="text" class="form-control" id="street" placeholder="Wpisz ulicę" required>
             </div>
 
-            <div class="col mb-3">
-                <label for="zipCode" class="form-label">Kod pocztowy
+            <div class="row mb-2">
+                <div class="col-md-2 mb-3">
+                    <label for="zipCode" class="form-label">Kod pocztowy</label>
                     <input type="text" class="form-control" id="zipCode" placeholder="Wpisz kod pocztowy" required>
-                </label>
-                <label for="city" class="form-label">Miasto
+                </div>
+                <div class="col-md mb-3">
+                    <label for="city" class="form-label">Miasto</label>
                     <input type="text" class="form-control" id="city" placeholder="Wpisz miasto" required>
-                </label>
+                </div>
             </div>
 
-            <div class="col mb-3">
-                <label for="country" class="form-label">Kraj
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="country" class="form-label">Kraj</label>
                     <select class="form-select" id="country" required>
                         <option value="">Wybierz kraj</option>
                         <!-- Options will be filled by JavaScript -->
                     </select>
-                </label>
-                <label for="phoneNumber" class="form-label">Numer telefonu komórkowego
+                </div>
+                <div class="col-md mb-3">
+                    <label for="phoneNumber" class="form-label">Numer telefonu</label>
                     <div class="input-group">
                         <select class="form-select" id="countryCode" aria-label="Wybierz numer kierunkowy">
                             <option selected>Wybierz...</option>
                             <option value="+48">+48 (Polska)</option>
                             <option value="+1">+1 (Stany Zjednoczone)</option>
-                            <!-- Dodaj więcej opcji, jeśli jest to potrzebne -->
+                            <!-- Add more options if needed -->
                         </select>
-                        <input type="text" class="form-control" id="phoneNumber" placeholder="Wpisz numer komórkowy"
-                               required>
+                        <input type="text" class="form-control" id="phoneNumber" placeholder="Wpisz numer komórkowy" required>
                     </div>
-                </label>
-            </div>
-
-            <div class="row mb-3">
-
-
-            </div>
-
-
-
-            <div class="mb-3">
-                <label for="shippingMethod" class="form-label">Rodzaj przesyłki</label>
-                <select class="form-select" id="shippingMethod" required>
-                    <option value="">Wybierz rodzaj przesyłki</option>
-                    <option value="DPD">DPD</option>
-                    <option value="InPost">InPost</option>
-                </select>
+                </div>
             </div>
 
             <div class="mb-3">
-                <label for="paymentMethod" class="form-label">Rodzaj płatności</label>
-                <select class="form-select" id="paymentMethod" required>
-                    <option value="">Wybierz rodzaj płatności</option>
-                    <option value="karta">Karta</option>
-                    <option value="blik">BLIK</option>
-                    <option value="pośrednik">Pośrednik płatności</option>
-                </select>
+                <label class="form-label">Rodzaj dostawy</label><br>
+                <input type="radio" id="firstDelivery" name="shipment" value="1">
+                <label for="firstDelivery">DHL</label>
+
+                <input type="radio" id="secondDelivery" name="shipment" value="2">
+                <label for="secondDelivery">DPD</label>
+
+                <input type="radio" id="thirdDelivery" name="shipment" value="3">
+                <label for="thirdDelivery">Poczta Polska</label>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Rodzaj płatności</label><br>
+                <input type="radio" id="firstOption" name="payment" value="1">
+                <label for="firstOption">Przelew tradycyjny</label>
+
+                <input type="radio" id="secondOption" name="payment" value="2">
+                <label for="secondOption">Płatność online</label>
+
+                <input type="radio" id="thirdOption" name="payment" value="3">
+                <label for="thirdOption">PayPal</label>
             </div>
 
             <!-- Dodatkowe pola, np. dane do faktury -->
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1">
+            <div class="row mb-2">
+                <div class="col mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="col mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="vatUE">
-                <label class="form-check-label" for="vatUE">VAT UE</label>
-            </div>
-            <div class="mb-3">
-                <label for="vatNumber" class="form-label">VAT Number</label>
-                <input type="text" class="form-control" id="vatNumber" aria-describedby="vatHelp">
-                <div id="vatHelp" class="form-text">Kod kraju państwa członkowskiego i seria cyfr unikalnych dla tego
-                    podmiotu gospodarczego.</div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <label for="Vat">VAT EU
+                            <input type="checkbox" id="Vat">
+                        </label>
+                    </div>
+                </div>
+                <input type="text" class="form-control" aria-label="Text input with checkbox">
             </div>
 
             <div class="mb-3">
@@ -113,7 +115,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#form-feedback-modal">submit</button>
+                data-bs-target="#form-feedback-modal">Prześlij</button>
         </form>
     </div>
 
